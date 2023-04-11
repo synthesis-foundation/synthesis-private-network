@@ -1,6 +1,6 @@
 # Synthesis
 
-[![Build status](https://github.com/synthesis-network/synthesis-go/actions/workflows/ci.yml/badge.svg)](https://github.com/synthesis-network/synthesis-go/actions/workflows/ci.yml)
+[![Build status](https://github.com/synthesis-foundation/synthesis-private-network/actions/workflows/ci.yml/badge.svg)](https://github.com/synthesis-foundation/synthesis-private-network/actions/workflows/ci.yml)
 
 ## Introduction
 

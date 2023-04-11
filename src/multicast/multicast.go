@@ -14,7 +14,7 @@ import (
 	"github.com/Arceliar/phony"
 	"github.com/gologme/log"
 
-	"github.com/synthesis-network/synthesis-go/src/core"
+	"github.com/synthesis-foundation/synthesis-private-network/src/core"
 	"golang.org/x/net/ipv6"
 )
 

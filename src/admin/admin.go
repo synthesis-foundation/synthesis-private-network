@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/synthesis-network/synthesis-go/src/core"
+	"github.com/synthesis-foundation/synthesis-private-network/src/core"
 )
 
 // TODO: Add authentication

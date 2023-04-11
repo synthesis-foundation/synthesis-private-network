@@ -13,10 +13,10 @@ import (
 	"github.com/Arceliar/phony"
 	"golang.zx2c4.com/wireguard/tun"
 
-	"github.com/synthesis-network/synthesis-go/src/address"
-	"github.com/synthesis-network/synthesis-go/src/core"
-	"github.com/synthesis-network/synthesis-go/src/defaults"
-	"github.com/synthesis-network/synthesis-go/src/ipv6rwc"
+	"github.com/synthesis-foundation/synthesis-private-network/src/address"
+	"github.com/synthesis-foundation/synthesis-private-network/src/core"
+	"github.com/synthesis-foundation/synthesis-private-network/src/defaults"
+	"github.com/synthesis-foundation/synthesis-private-network/src/ipv6rwc"
 )
 
 type MTU uint16

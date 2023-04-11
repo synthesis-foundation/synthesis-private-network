@@ -3,7 +3,7 @@ package admin
 import (
 	"encoding/hex"
 
-	"github.com/synthesis-network/synthesis-go/src/version"
+	"github.com/synthesis-foundation/synthesis-private-network/src/version"
 )
 
 type GetSelfRequest struct{}

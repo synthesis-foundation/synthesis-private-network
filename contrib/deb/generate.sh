@@ -41,7 +41,7 @@ mkdir -p /tmp/$PKGNAME/usr/bin/
 mkdir -p /tmp/$PKGNAME/etc/systemd/system/
 
 cat > /tmp/$PKGNAME/debian/changelog << EOF
-Please see https://github.com/synthesis-network/synthesis-go/
+Please see https://github.com/synthesis-foundation/synthesis-private-network/
 EOF
 echo 9 > /tmp/$PKGNAME/debian/compat
 cat > /tmp/$PKGNAME/debian/control << EOF
@@ -60,10 +60,10 @@ Description: Synthesis Network
  other Synthesis nodes.
 EOF
 cat > /tmp/$PKGNAME/debian/copyright << EOF
-Please see https://github.com/synthesis-network/synthesis-go/
+Please see https://github.com/synthesis-foundation/synthesis-private-network/
 EOF
 cat > /tmp/$PKGNAME/debian/docs << EOF
-Please see https://github.com/synthesis-network/synthesis-go/
+Please see https://github.com/synthesis-foundation/synthesis-private-network/
 EOF
 cat > /tmp/$PKGNAME/debian/install << EOF
 usr/bin/synthesis usr/bin

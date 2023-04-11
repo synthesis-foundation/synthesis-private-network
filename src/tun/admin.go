@@ -3,7 +3,7 @@ package tun
 import (
 	"encoding/json"
 
-	"github.com/synthesis-network/synthesis-go/src/admin"
+	"github.com/synthesis-foundation/synthesis-private-network/src/admin"
 )
 
 type GetTUNRequest struct{}

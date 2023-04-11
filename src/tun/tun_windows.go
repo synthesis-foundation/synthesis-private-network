@@ -9,7 +9,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/synthesis-network/synthesis-go/src/defaults"
+	"github.com/synthesis-foundation/synthesis-private-network/src/defaults"
 	"golang.org/x/sys/windows"
 
 	wgtun "golang.zx2c4.com/wireguard/tun"

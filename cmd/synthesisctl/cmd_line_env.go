@@ -10,7 +10,7 @@ import (
 	"github.com/hjson/hjson-go"
 	"golang.org/x/text/encoding/unicode"
 
-	"github.com/synthesis-network/synthesis-go/src/defaults"
+	"github.com/synthesis-foundation/synthesis-private-network/src/defaults"
 )
 
 type CmdLineEnv struct {

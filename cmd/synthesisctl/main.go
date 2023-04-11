@@ -14,11 +14,11 @@ import (
 	"time"
 
 	"github.com/olekukonko/tablewriter"
-	"github.com/synthesis-network/synthesis-go/src/admin"
-	"github.com/synthesis-network/synthesis-go/src/core"
-	"github.com/synthesis-network/synthesis-go/src/multicast"
-	"github.com/synthesis-network/synthesis-go/src/tun"
-	"github.com/synthesis-network/synthesis-go/src/version"
+	"github.com/synthesis-foundation/synthesis-private-network/src/admin"
+	"github.com/synthesis-foundation/synthesis-private-network/src/core"
+	"github.com/synthesis-foundation/synthesis-private-network/src/multicast"
+	"github.com/synthesis-foundation/synthesis-private-network/src/tun"
+	"github.com/synthesis-foundation/synthesis-private-network/src/version"
 )
 
 func main() {

@@ -25,16 +25,16 @@ import (
 	"github.com/kardianos/minwinsvc"
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/synthesis-network/synthesis-go/src/address"
-	"github.com/synthesis-network/synthesis-go/src/admin"
-	"github.com/synthesis-network/synthesis-go/src/config"
-	"github.com/synthesis-network/synthesis-go/src/defaults"
-	"github.com/synthesis-network/synthesis-go/src/ipv6rwc"
+	"github.com/synthesis-foundation/synthesis-private-network/src/address"
+	"github.com/synthesis-foundation/synthesis-private-network/src/admin"
+	"github.com/synthesis-foundation/synthesis-private-network/src/config"
+	"github.com/synthesis-foundation/synthesis-private-network/src/defaults"
+	"github.com/synthesis-foundation/synthesis-private-network/src/ipv6rwc"
 
-	"github.com/synthesis-network/synthesis-go/src/core"
-	"github.com/synthesis-network/synthesis-go/src/multicast"
-	"github.com/synthesis-network/synthesis-go/src/tun"
-	"github.com/synthesis-network/synthesis-go/src/version"
+	"github.com/synthesis-foundation/synthesis-private-network/src/core"
+	"github.com/synthesis-foundation/synthesis-private-network/src/multicast"
+	"github.com/synthesis-foundation/synthesis-private-network/src/tun"
+	"github.com/synthesis-foundation/synthesis-private-network/src/version"
 )
 
 type node struct {

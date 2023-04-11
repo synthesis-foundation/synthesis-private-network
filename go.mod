@@ -1,4 +1,4 @@
-module github.com/synthesis-network/synthesis-go
+module github.com/synthesis-foundation/synthesis-private-network
 
 go 1.17
 

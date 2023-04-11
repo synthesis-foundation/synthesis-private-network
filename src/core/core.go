@@ -14,7 +14,7 @@ import (
 	"github.com/Arceliar/phony"
 	"github.com/gologme/log"
 
-	"github.com/synthesis-network/synthesis-go/src/version"
+	"github.com/synthesis-foundation/synthesis-private-network/src/version"
 )
 
 // The Core object represents the Synthesis node. You should create a Core

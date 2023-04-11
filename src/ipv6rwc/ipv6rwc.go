@@ -13,8 +13,8 @@ import (
 
 	iwt "github.com/Arceliar/ironwood/types"
 
-	"github.com/synthesis-network/synthesis-go/src/address"
-	"github.com/synthesis-network/synthesis-go/src/core"
+	"github.com/synthesis-foundation/synthesis-private-network/src/address"
+	"github.com/synthesis-foundation/synthesis-private-network/src/core"
 )
 
 const keyStoreTimeout = 2 * time.Minute

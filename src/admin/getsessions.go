@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/synthesis-network/synthesis-go/src/address"
+	"github.com/synthesis-foundation/synthesis-private-network/src/address"
 )
 
 type GetSessionsRequest struct{}

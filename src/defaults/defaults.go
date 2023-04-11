@@ -1,11 +1,11 @@
 package defaults
 
-import "github.com/synthesis-network/synthesis-go/src/config"
+import "github.com/synthesis-foundation/synthesis-private-network/src/config"
 
 type MulticastInterfaceConfig = config.MulticastInterfaceConfig
 
-var defaultConfig = ""      // LDFLAGS='-X github.com/synthesis-network/synthesis-go/src/defaults.defaultConfig=/path/to/config
-var defaultAdminListen = "" // LDFLAGS='-X github.com/synthesis-network/synthesis-go/src/defaults.defaultAdminListen=unix://path/to/sock'
+var defaultConfig = ""      // LDFLAGS='-X github.com/synthesis-foundation/synthesis-private-network/src/defaults.defaultConfig=/path/to/config
+var defaultAdminListen = "" // LDFLAGS='-X github.com/synthesis-foundation/synthesis-private-network/src/defaults.defaultAdminListen=unix://path/to/sock'
 
 // Defines which parameters are expected by default for configuration on a
 // specific platform. These values are populated in the relevant defaults_*.go

@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/Arceliar/phony"
-	"github.com/synthesis-network/synthesis-go/src/address"
+	"github.com/synthesis-foundation/synthesis-private-network/src/address"
 )
 
 type SelfInfo struct {

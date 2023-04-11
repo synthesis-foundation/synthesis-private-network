@@ -12,7 +12,7 @@ import (
 	iwt "github.com/Arceliar/ironwood/types"
 	"github.com/Arceliar/phony"
 
-	"github.com/synthesis-network/synthesis-go/src/address"
+	"github.com/synthesis-foundation/synthesis-private-network/src/address"
 )
 
 const (
