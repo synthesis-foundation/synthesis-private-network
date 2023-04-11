@@ -1,0 +1,13 @@
+[Unit]
+Description=synthesis default config generator
+ConditionPathExists=|!/etc/synthesis.conf
+ConditionFileNotEmpty=|!/etc/synthesis.conf
+Wants=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+Group=synthesis
+StandardOutput=file:/etc/synthesis.conf
+ExecStart=/usr/bin/synthesis -genconf
+ExecStartPost=/usr/bin/chmod 0640 /etc/synthesis.conf

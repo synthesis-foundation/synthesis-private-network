@@ -1,0 +1,72 @@
+#!/bin/sh
+#
+# Put the synthesis and synthesisctl binaries into /usr/local/bin
+# Then copy this script into /etc/rc.d/synthesis
+# Finally, run:
+#   1. chmod +x /etc/rc.d/synthesis /usr/local/bin/{synthesis,synthesisctl}
+#   2. echo "synthesis_enable=yes" >> /etc/rc.d
+#   3. service synthesis start
+#
+# PROVIDE: synthesis
+# REQUIRE: networking
+# KEYWORD:
+
+. /etc/rc.subr
+
+name="synthesis"
+rcvar="synthesis_enable"
+
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+pidfile="/var/run/synthesis/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-P ${pidfile} -r -f ${synthesis_command}"
+
+synthesis_start()
+{
+	test ! -x /usr/local/bin/synthesis && (
+		logger -s -t synthesis "Warning: /usr/local/bin/synthesis is missing or not executable"
+		logger -s -t synthesis "Copy the synthesis binary into /usr/local/bin and then chmod +x /usr/local/bin/synthesis"
+		return 1
+	)
+
+	test ! -f /etc/synthesis.conf && (
+		logger -s -t synthesis "Generating new configuration file into /etc/synthesis.conf"
+		/usr/local/bin/synthesis -genconf > /etc/synthesis.conf
+	)
+
+	tap_path="$(cat /etc/synthesis.conf | egrep -o '/dev/tap[0-9]{1,2}$')"
+	tap_name="$(echo -n ${tap_path} | tr -d '/dev/')"
+
+	/sbin/ifconfig ${tap_name} >/dev/null 2>&1 || (
+		logger -s -t synthesis "Creating ${tap_name} adapter"
+		/sbin/ifconfig ${tap_name} create || logger -s -t synthesis "Failed to create ${tap_name} adapter"
+	)
+
+	test ! -d /var/run/synthesis && mkdir -p /var/run/synthesis
+
+	logger -s -t synthesis "Starting synthesis"
+	${command} ${command_args} /usr/local/bin/synthesis -useconffile /etc/synthesis.conf \
+		1>/var/log/synthesis.stdout.log \
+		2>/var/log/synthesis.stderr.log &
+}
+
+synthesis_stop()
+{
+	logger -s -t synthesis "Stopping synthesis"
+	test -f /var/run/synthesis/${name}.pid && kill -TERM $(cat /var/run/synthesis/${name}.pid)
+
+	tap_path="$(cat /etc/synthesis.conf | grep /dev/tap | egrep -o '/dev/.*$')"
+        tap_name="$(echo -n ${tap_path} | tr -d '/dev/')"
+
+	/sbin/ifconfig ${tap_name} >/dev/null 2>&1 && (
+		logger -s -t synthesis "Destroying ${tap_name} adapter"
+		/sbin/ifconfig ${tap_name} destroy || logger -s -t synthesis "Failed to destroy ${tap_name} adapter"
+	)
+}
+
+load_rc_config $name
+: ${synthesis_enable:=no}
+
+run_rc_command "$1"
